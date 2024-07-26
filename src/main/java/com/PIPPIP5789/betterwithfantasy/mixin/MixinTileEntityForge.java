@@ -20,7 +20,6 @@ public abstract class MixinTileEntityForge {
 
     @Inject(method = "stokeFlames", at = @At("HEAD"), remap = false)
     public void stokeFlames(World world, BlockPos pos, CallbackInfo ci) {
-        System.out.println("WAKA IN THE HOUSE!");
         EnumFacing dirFacing = this.getFacing(world.getBlockState(pos));
 
         BlockPos dirFacingPos = pos.offset(dirFacing, 1);
