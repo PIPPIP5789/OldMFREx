@@ -26,8 +26,14 @@ public abstract class MixinTileEntityForge {
         try {
             minefantasy.mfr.tile.TileEntityForge tile = (minefantasy.mfr.tile.TileEntityForge) world.getTileEntity(dirFacingPos);
             if (tile != null) {
-                System.out.println(Math.min(tile.fuelTemperature * tile.getBellowsEffect(), (float) tile.getMaxTemp()));
                 tile.onUsedWithBellows(Math.min(tile.fuelTemperature * tile.getBellowsEffect(), (float) tile.getMaxTemp()));
+            }
+        }
+        catch(ClassCastException e) {}
+        try {
+            minefantasy.mfr.tile.TileEntityForge wallTile = (minefantasy.mfr.tile.TileEntityForge) world.getTileEntity(dirFacingPos.offset(dirFacing, 1));
+            if (wallTile != null) {
+                wallTile.onUsedWithBellows(Math.min(wallTile.fuelTemperature * wallTile.getBellowsEffect(), (float) wallTile.getMaxTemp()));
             }
         }
         catch(ClassCastException e) {}
