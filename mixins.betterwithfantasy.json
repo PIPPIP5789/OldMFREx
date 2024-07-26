@@ -1,0 +1,8 @@
+{
+  "compatibilityLevel": "JAVA_8",
+  "package": "com.PIPPIP5789.betterwithfantasy.mixin",
+  "refmap": "refmap.betterwithfantasy.json",
+  "mixins": ["MixinTileEntityForge"],
+  "client": ["MixinMinecraft"],
+  "server": []
+}
