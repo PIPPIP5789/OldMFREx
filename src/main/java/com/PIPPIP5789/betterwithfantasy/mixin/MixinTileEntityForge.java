@@ -21,16 +21,16 @@ public abstract class MixinTileEntityForge {
     @Inject(method = "stokeFlames", at = @At("HEAD"), remap = false)
     public void stokeFlames(World world, BlockPos pos, CallbackInfo ci) {
         EnumFacing dirFacing = this.getFacing(world.getBlockState(pos));
-
         BlockPos dirFacingPos = pos.offset(dirFacing, 1);
-        Block targetForge = world.getBlockState(dirFacingPos).getBlock();
 
-        if (targetForge instanceof IBellowsUseable) {
-            minefantasy.mfr.tile.TileEntityForge tile = (minefantasy.mfr.tile.TileEntityForge) world.getTileEntity(pos);
+        try {
+            minefantasy.mfr.tile.TileEntityForge tile = (minefantasy.mfr.tile.TileEntityForge) world.getTileEntity(dirFacingPos);
             if (tile != null) {
+                System.out.println(Math.min(tile.fuelTemperature * tile.getBellowsEffect(), (float) tile.getMaxTemp()));
                 tile.onUsedWithBellows(Math.min(tile.fuelTemperature * tile.getBellowsEffect(), (float) tile.getMaxTemp()));
             }
         }
+        catch(ClassCastException e) {}
     }
 
 }
