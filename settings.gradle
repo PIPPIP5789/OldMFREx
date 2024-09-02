@@ -1,13 +1,36 @@
 pluginManagement {
+    /**
+     * These are the repositories used by the plugins at the top of the build.gradle file.
+     */
     repositories {
         gradlePluginPortal()
+        mavenCentral()
+        //Forge
         maven {
-            name 'FancyGradle'
-            url 'https://gitlab.com/api/v4/projects/26758973/packages/maven'
+            name 'MinecraftForge'
+            url 'https://maven.minecraftforge.net/'
         }
+        //Fancy Gradle
         maven {
-            name 'ForgeGradle 5'
-            url 'https://maven.minecraftforge.net'
+            name 'Garden of Fancy'
+            url 'https://maven.gofancy.wtf/releases'
+        }
+        //Mixins
+        maven {
+            name 'MixinGradle'
+            url 'https://repo.spongepowered.org/repository/maven-public/'
+        }
+    }
+
+    /**
+     * This is actually the same thing that forge does in later versions since otherwise gradle complains about
+     * mixingradle not having the proper plugin naming scheme.
+     */
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.toString() == 'org.spongepowered.mixin') {
+                useModule("org.spongepowered:mixingradle:${requested.version}")
+            }
         }
     }
 }

@@ -1,0 +1,27 @@
+{
+  "type": "carpenter_shaped_recipe",
+  "skill": "construction",
+  "research": "",
+  "tool_type": "hammer",
+  "block_tier": -1,
+  "craft_time": 20,
+  "tool_tier": 0,
+  "skill_xp": 1,
+  "vanilla_xp": 0.4,
+  "sound": "minefantasyreforged:block.hammer",
+  "pattern": [
+    "TN",
+    "TT"
+  ],
+  "key": {
+    "T": {
+      "item": "#TIMBER_IRONBARK_WOOD"
+    },
+    "N": {
+      "item": "minefantasyreforged:nail"
+    }
+  },
+  "result": {
+    "item": "minefantasyreforged:ironbark_stairs"
+  }
+}
