@@ -3,6 +3,7 @@ package com.PIPPIP5789.mfrex.init;
 import com.google.common.collect.Lists;
 import minefantasy.mfr.api.MineFantasyReforgedAPI;
 import minefantasy.mfr.config.ConfigCrafting;
+import minefantasy.mfr.config.ConfigHardcore;
 import minefantasy.mfr.init.MineFantasyBlocks;
 import minefantasy.mfr.init.MineFantasyItems;
 import minefantasy.mfr.recipe.DummyRecipe;
@@ -254,6 +255,21 @@ public class RecipeInit {
         }
         if(ConfigCrafting.isKitchenBenchItemCraftable(new ItemStack(Items.RABBIT_STEW))) {
             mfrRemoveRecipes(Items.RABBIT_STEW);
+        }
+
+        if(ConfigHardcore.preventCeramic) {
+            MineFantasyReforgedAPI.removeSmelting(new ItemStack(Items.CLAY_BALL));
+        }
+
+        if(ConfigHardcore.preventCook) {
+            MineFantasyReforgedAPI.removeSmelting(new ItemStack(Items.POTATO));
+            MineFantasyReforgedAPI.removeSmelting(new ItemStack(Items.BEEF));
+            MineFantasyReforgedAPI.removeSmelting(new ItemStack(Items.PORKCHOP));
+            MineFantasyReforgedAPI.removeSmelting(new ItemStack(Items.CHICKEN));
+            MineFantasyReforgedAPI.removeSmelting(new ItemStack(Items.FISH, 1, 0));
+            MineFantasyReforgedAPI.removeSmelting(new ItemStack(Items.FISH, 1, 1));
+            MineFantasyReforgedAPI.removeSmelting(new ItemStack(Items.MUTTON));
+            MineFantasyReforgedAPI.removeSmelting(new ItemStack(Items.RABBIT));
         }
     }
 
