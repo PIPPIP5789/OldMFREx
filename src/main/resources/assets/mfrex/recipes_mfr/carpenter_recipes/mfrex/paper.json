@@ -1,7 +1,7 @@
 {
   "type": "carpenter_shaped_recipe",
   "skill": "artisanry",
-  "research": "",
+  "research": "none",
   "tool_type": "mallet",
   "block_tier": -1,
   "craft_time": 20,
