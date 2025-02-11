@@ -4,7 +4,7 @@ plugins {
     id 'org.spongepowered.mixin' version '0.7.+'
 }
 
-// apply plugin: 'org.spongepowered.mixin'
+//apply plugin: 'org.spongepowered.mixin'
 if (project.use_mixins.toBoolean()) {
 	apply plugin: 'org.spongepowered.mixin'
 }
@@ -99,6 +99,9 @@ repositories {
         url = "https://chickenbones.net/maven"
     }
     maven {
+        url "https://maven.blamejared.com/"
+    }
+    maven {
         // location of the maven that hosts JEI files
         name = "Progwml6 maven"
         url = "http://dvs1.progwml6.com/files/maven"
@@ -131,6 +134,55 @@ dependencies {
     implementation fg.deobf("curse.maven:minefantasy-reforged-431996:5553214")
     //implementation fg.deobf("curse.maven:animaniabase-261199:3213136")
     //implementation fg.deobf("curse.maven:animaniafarm-407632:3213139")
+
+    compileOnly fg.deobf("curse.maven:simple-corn-246761:2854990")
+    if (project.debug_simple_corn.toBoolean()) {
+        runtimeOnly fg.deobf("curse.maven:simple-corn-246761:2854990")
+    }
+
+    compileOnly fg.deobf("curse.maven:rustic-256141:3107974")
+    if (project.debug_rustic.toBoolean()) {
+        runtimeOnly fg.deobf("curse.maven:rustic-256141:3107974")
+    }
+
+    compileOnly ("com.animania:animania-1.12.2-base:2.0.3.28")
+    compileOnly ("com.animania:animania-1.12.2-catsdogs:1.0.0.27")
+    compileOnly ("com.animania:animania-1.12.2-extra:1.0.2.28")
+    compileOnly ("com.animania:animania-1.12.2-farm:1.0.2.28")
+    if (project.debug_animania_base.toBoolean()) {
+        runtimeOnly ("com.animania:animania-1.12.2-base:2.0.3.28")
+    }
+    if (project.debug_animania_catsdogs.toBoolean()) {
+        runtimeOnly ("com.animania:animania-1.12.2-catsdogs:1.0.0.27")
+    }
+    if (project.debug_animania_extra.toBoolean()) {
+        runtimeOnly ("com.animania:animania-1.12.2-extra:1.0.2.28")
+    }
+    if (project.debug_animania_farm.toBoolean()) {
+        runtimeOnly ("com.animania:animania-1.12.2-farm:1.0.2.28")
+    }
+
+    compileOnly fg.deobf("curse.maven:betterwitheverything-896908:5202745")
+    if (project.debug_betterwitheverything.toBoolean()) {
+        runtimeOnly fg.deobf("curse.maven:betterwitheverything-896908:5202745")
+    }
+
+    compileOnly fg.deobf("curse.maven:spartan-weaponry-278141:5564836")
+    if (project.debug_spartanweaponry.toBoolean()) {
+        //runtimeOnly fg.deobf("curse.maven:spartan-weaponry-278141:5564836")
+    }
+
+    compileOnly fg.deobf("curse.maven:charcoal-pit-264111:2615892")
+    if (project.debug_charcoal_pit.toBoolean()) {
+        runtimeOnly fg.deobf("curse.maven:charcoal-pit-264111:2615892")
+    }
+
+    compileOnly fg.deobf("curse.maven:biomes-o-plenty-220318:3558882")
+    compileOnly fg.deobf("curse.maven:rusticated-fruit-547435:3533340")
+    if (project.debug_rusticatedfruit.toBoolean()) {
+        runtimeOnly fg.deobf("curse.maven:biomes-o-plenty-220318:3558882")
+        runtimeOnly fg.deobf("curse.maven:rusticated-fruit-547435:3533340")
+    }
 }
 
 fancyGradle {
@@ -200,10 +252,10 @@ sourceSets {
     // main.output.setResourcesDir(main.java.outputDir)
 }
 
-//mixin {
-//    add sourceSets.main, "mixins.betterwithfantasy.refmap.json"
-//    config 'mixins.betterwithfantasy.json'
-//}
+mixin {
+    add sourceSets.main, "mixins.mfrex.refmap.json"
+    config 'mixins.mfrex.json'
+}
 
 jar {
     manifest {
@@ -215,7 +267,7 @@ jar {
                 "Implementation-Version": "${mod_version}",
                 "Implementation-Vendor" :"PIPPIP5789",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
-                //"FMLCorePlugin": "com.PIPPIP5789.betterwithfantasy.mixin.MixinLoader",
+                "FMLCorePlugin": "com.PIPPIP5789.mfrex.mixin.MixinLoader",
                 "FMLCorePluginContainsFMLMod": true
         ])
     }

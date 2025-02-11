@@ -1,0 +1,83 @@
+item.pottage.name=Pottage
+item.jam_jar.name=Jam Jar
+item.jam_apple.name=Apple Jam
+item.jam_berry.name=Berry Jam
+item.jam_apple_roll.name=Apple Jam Roll
+item.jam_berry_roll.name=Berry Jam Roll
+item.berries_dried.name=Dried Berries
+item.slices_carrot.name=Carrot Slices
+item.slices_potato.name=Potato Slices
+
+item.jam_grape.name=Grape Jam
+item.jam_grape_roll.name=Grape Jam Roll
+item.sandwitch_veggie.name=Veggie Sandwitch
+item.salad.name=Salad
+item.pasta_noodles_raw.name=Raw Pasta Noodles
+item.pasta_noodles.name=Pasta Noodles
+item.tomato_sauce.name=Tomato Sauce
+item.meat_sauce.name=Meat Sauce
+item.pasta.name=Pasta
+item.pasta_meat.name=Meaty Pasta
+
+item.jam_peach.name=Peach Jam
+item.jam_pear.name=Pear Jam
+item.jam_persimmon.name=Persimmon Jam
+item.jam_peach_roll.name=Peach Jam Roll
+item.jam_pear_roll.name=Pear Jam Roll
+item.jam_persimmon_roll.name=Persimmon Jam Roll
+
+item.fish_dinner.name=Fish Dinner
+
+item.rustic.beeswax.name=Testing Name
+
+tile.bloomery.name=Empty Stone Shell
+block.charcoal_pit.name=Straw Thatch
+
+item.bwm:material.hellfire_dust.name=Netherack Dust
+item.bwm:material.concentrated_hellfire.name=Netherforged Steel Ingot
+
+material.mfrex:black_steel=Black Steel
+material.mfrex:black_steel_ingot=Black Steel
+material.mfrex:ignotumite=Ignotumite
+material.mfrex:ignotumite_ingot=Ignotumite
+material.mfrex:pig_iron=Pig Iron
+material.mfrex:pig_iron_ingot=Pig Iron
+material.mfrex:obsidian=Obsidian
+material.mfrex:obsidian_ingot=Obsidian
+material.mfrex:red_steel=Red Steel
+material.mfrex:red_steel_ingot=Red Steel
+material.mfrex:blue_steel=Blue Steel
+material.mfrex:blue_steel_ingot=Blue Steel
+material.mfrex:adamantium=Adamantium
+material.mfrex:adamantium_ingot=Adamantium
+material.mfrex:mithril=Mithril
+material.mfrex:mithril_ingot=Mithril
+material.mfrex:mithium_steel=Mithium
+material.mfrex:mithium_ingot=Mithium
+material.mfrex:enderforge=Enderforge
+material.mfrex:enderforge_ingot=Enderforge
+material.mfrex:tungsten=Enderforge
+material.mfrex:tungsten_ingot=Enderforge
+material.mfrex:composite_alloy=Composite Alloy
+material.mfrex:composite_alloy_ingot=Composite Alloy
+
+#knowledge.jams=Jams
+#knowledge.jamrolls=Jam Rolls
+#knowledge.pottage=Pottage
+#knowledge.salad=Salad
+#knowledge.veggie_sandwitch=Vegetable Sandwitch
+#knowledge.slicing=Sliced Vegetables
+
+#knowledge.jams.desc=Caught in a jam
+#knowledge.jamrolls.desc=Fruity sweetness rolled up
+#knowledge.pottage.desc=Hearty porridge
+#knowledge.salad.desc=Eat your greens
+#knowledge.veggie_sandwitch.desc=Even more greens
+#knowledge.slicing.desc=Slice and (no) dice
+
+#knowledge.jams.page.1=Jams are a useful way of preserving various fruits and berries, and are especially helpful when dealing with long trips. Furthermore, by jamming them, they can go great with a host of new foods, unlocking new possibilities and combinations.
+#knowledge.jamrolls.page.1=You've discovered that by stuffing a warm, flaky, golden-crusted breadroll with a cool, sweet, fruit-flavored jam, you can create a both delicious and nutritious dish! The Jam Roll is a cheap but solid food for going exploring with.
+#knowledge.pottage.page.1=A staple in both the peasant's and the royal's diet, pottage is a hearty dish that provides a lot of nutrition across the board, being made from a combination of meats, vegetables, and an assortment of foods.
+#knowledge.salad.page.1=A lean, mean, green dish, the salad is an easy to prepare, yet surprisingly healthy alternative, and a good source of vegetables if you're running a little low.
+#knowledge.veggie_sandwitch.page.1=By adding some vegetables to your normal sandwitch recipe, you find that the sandwitch becomes even more potent than before, giving you some additional benefits.
+#knowledge.slicing.page.1=By slicing up vegetables before use, you can often get more out of a particular kind of food. In fact, sometimes, foods require only sparse amounts of a vegetable, in which case cutting it up is a necessity. Either way, make sure to chop before you cook!

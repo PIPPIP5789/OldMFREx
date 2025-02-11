@@ -1,0 +1,6 @@
+﻿{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "fantasyfoods:items/mfrex_dried_berries"
+    }
+}
